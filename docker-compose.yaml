@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  webserver:
+    image: httpd:latest
+    container_name: projeto-apache
+    ports:
+      - "80:80"
+    volumes:
+      - ./data/site:/usr/local/apache2/htdocs
+    networks: 
+      - rede
